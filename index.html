@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunlit Moon</title>
+<meta name="description" content="Where Brutalist Precision Meets Human Soul. A creative studio, artist collective, and philosophy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0a0a0a;
+    --surface: #111;
+    --border: rgba(255,255,255,0.06);
+    --text: #e0e0e0;
+    --muted: #666;
+    --accent: #FFD700;
+    --accent-dim: rgba(255,215,0,0.15);
+    --coral: #FF6B6B;
+    --mono: 'Space Mono', monospace;
+    --sans: 'Space Grotesk', -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.7; overflow-x: hidden; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+/* ═══ HERO ═══ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+.hero-mark { width: 80px; height: 80px; margin-bottom: 3rem; opacity: 0.9; }
+.hero h1 {
+    font-family: var(--mono);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+}
+.hero h1 span { color: var(--accent); }
+.hero .tagline {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 550px;
+    font-weight: 300;
+}
+.hero .scroll-hint {
+    position: absolute;
+    bottom: 3rem;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+
+/* ═══ SECTIONS ═══ */
+section { padding: 6rem 0; border-bottom: 1px solid var(--border); }
+.section-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    margin-bottom: 3rem;
+}
+
+/* ═══ MANIFESTO ═══ */
+.manifesto p {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    line-height: 1.9;
+    color: #bbb;
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+}
+.manifesto strong { color: var(--text); font-weight: 600; }
+.manifesto em { color: var(--accent); font-style: normal; }
+
+/* ═══ PILLARS ═══ */
+.pillars { list-style: none; max-width: 700px; }
+.pillars li {
+    font-size: 1.15rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+.pillars li .num {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    min-width: 2rem;
+}
+
+/* ═══ VISUAL GRID ═══ */
+.visual-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.visual-grid .item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    aspect-ratio: 1;
+}
+.visual-grid .item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.visual-grid .item:hover img { transform: scale(1.05); }
+.visual-grid .item .label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+}
+
+/* ═══ PROCESS ═══ */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.process-card {
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+.process-card:hover { border-color: var(--accent-dim); }
+.process-card .step {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+}
+.process-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+.process-card p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* ═══ MENTORS ═══ */
+.mentor-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+.mentor {
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    text-align: center;
+    transition: border-color 0.3s, background 0.3s;
+}
+.mentor:hover { border-color: var(--accent-dim); background: var(--surface); }
+.mentor .name { font-size: 0.8rem; font-weight: 600; margin-bottom: 0.25rem; }
+.mentor .gift { font-family: var(--mono); font-size: 0.6rem; color: var(--muted); }
+
+/* ═══ COLOPHON ═══ */
+.colophon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+.colophon dt { color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; font-size: 0.6rem; }
+.colophon dd { line-height: 1.8; }
+
+/* ═══ FOOTER ═══ */
+footer {
+    padding: 4rem 0 2rem;
+    text-align: center;
+}
+footer .quote {
+    font-size: 1rem;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+footer .credits {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+    .visual-grid, .process-grid { grid-template-columns: 1fr; }
+    .mentor-grid { grid-template-columns: repeat(2, 1fr); }
+    .colophon { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+    <svg class="hero-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" fill="#FFD700"/>
+        <circle cx="140" cy="100" r="60" fill="#0a0a0a"/>
+        <polygon points="180,100 200,80 200,120" fill="#FFD700" opacity="0.6"/>
+    </svg>
+    <h1>Sunlit<br><span>Moon</span></h1>
+    <p class="tagline">A creative studio, artist collective, and philosophy. Where brutalist precision meets human soul.</p>
+    <div class="scroll-hint">Scroll to explore ↓</div>
+</div>
+
+<!-- ═══ MANIFESTO ═══ -->
+<section>
+    <div class="section-label">Manifesto</div>
+    <div class="manifesto">
+        <p>We exist at the intersection of <strong>technology and authentic human expression</strong>. The name comes from the paradox of a sunlit moon — light and darkness, perfection and imperfection, coexisting in the same body.</p>
+        <p>Each crater is a story of impact and survival. We believe <em>expression is the highest currency</em>. The richest person is the freest to express.</p>
+        <p>This studio is a <strong>cathedral under perpetual construction</strong>. A safe space for authentic creative expression in a world of algorithmic echo chambers. We build tools, curate community, and produce work across every medium.</p>
+        <p>The present does not drift into the past. It meets us in the future, <em>invested or spent</em>.</p>
+    </div>
+</section>
+
+<!-- ═══ PILLARS ═══ -->
+<section>
+    <div class="section-label">Brand Pillars</div>
+    <ul class="pillars">
+        <li><span class="num">01</span> Expression as Currency — the freest to express is the richest</li>
+        <li><span class="num">02</span> Perfectly Imperfect — each crater is a story, each crack carries light</li>
+        <li><span class="num">03</span> The Cathedral — under perpetual construction, never finished, always becoming</li>
+        <li><span class="num">04</span> Studio of Studios — music, film, art, design, code, writing — all mediums welcome</li>
+        <li><span class="num">05</span> Build It and They Will Come — the space creates the community, not the other way around</li>
+    </ul>
+</section>
+
+<!-- ═══ VISUAL IDENTITY ═══ -->
+<section>
+    <div class="section-label">Visual Identity</div>
+    <div class="visual-grid">
+        <div class="item"><img src="logo-mark.png" alt="Logo Mark"><div class="label">Brand Mark</div></div>
+        <div class="item"><img src="hero-space.png" alt="Hero Space"><div class="label">The Space</div></div>
+        <div class="item"><img src="texture-basquiat.png" alt="Texture"><div class="label">Texture Language</div></div>
+        <div class="item"><img src="type-brutalist.png" alt="Typography"><div class="label">Type System</div></div>
+    </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section>
+    <div class="section-label">How We Work</div>
+    <div class="process-grid">
+        <div class="process-card">
+            <div class="step">Scout</div>
+            <h3>Research + Strategy</h3>
+            <p>Every project begins with deep cultural research. We map aesthetic lineages, build keyword libraries, and find the 3% that makes your brand new.</p>
+        </div>
+        <div class="process-card">
+            <div class="step">Vision</div>
+            <h3>Generate + Curate</h3>
+            <p>We generate wide and curate ruthlessly. 100 concepts, keep 3. The creative director's job is to kill, not to keep. Reality Serum makes AI output feel human.</p>
+        </div>
+        <div class="process-card">
+            <div class="step">Forge</div>
+            <h3>Produce + Deliver</h3>
+            <p>Production at scale with zero quality drift. Brand consistency enforced through systems, not just taste. Every asset is art-directed, never templated.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ MENTORS ═══ -->
+<section>
+    <div class="section-label">Creative DNA</div>
+    <div class="mentor-grid">
+        <div class="mentor"><div class="name">Walt Disney</div><div class="gift">Total Experience</div></div>
+        <div class="mentor"><div class="name">Kanye West</div><div class="gift">Curatorial Auteur</div></div>
+        <div class="mentor"><div class="name">Pharrell</div><div class="gift">Cross-Modal Vision</div></div>
+        <div class="mentor"><div class="name">Rubell &amp; Schrager</div><div class="gift">Curated Space</div></div>
+        <div class="mentor"><div class="name">Tesla</div><div class="gift">Systems Thinking</div></div>
+        <div class="mentor"><div class="name">Michelangelo</div><div class="gift">Revelation</div></div>
+        <div class="mentor"><div class="name">Da Vinci</div><div class="gift">The Notebook</div></div>
+        <div class="mentor"><div class="name">Basquiat</div><div class="gift">Raw Nerve</div></div>
+        <div class="mentor"><div class="name">Virgil Abloh</div><div class="gift">The 3% Remix</div></div>
+        <div class="mentor"><div class="name">You</div><div class="gift">Install Your Engine</div></div>
+    </div>
+</section>
+
+<!-- ═══ COLOPHON ═══ -->
+<section>
+    <div class="section-label">Technical Colophon</div>
+    <div class="colophon">
+        <dl>
+            <dt>Engine</dt>
+            <dd>Orchestrator<br>Rust + Zig</dd>
+        </dl>
+        <dl>
+            <dt>Intelligence</dt>
+            <dd>Ollama (qwen3:32b)<br>Local inference</dd>
+        </dl>
+        <dl>
+            <dt>Generation</dt>
+            <dd>SDXL (MPS)<br>Apple Silicon native</dd>
+        </dl>
+        <dl>
+            <dt>Cost</dt>
+            <dd>$0.00 per run<br>Zero external APIs</dd>
+        </dl>
+    </div>
+</section>
+
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <div class="quote">The present does not drift into the past.<br>It meets us in the future, invested or spent.</div>
+    <div class="credits">Sunlit Moon Creative Studio — Built on Orchestrator</div>
+</footer>
+
+</body>
+</html>
