@@ -1,0 +1,61 @@
+{
+  "brand_name": "Sunlit Moon Creative Studio",
+  "pillars": [
+    "Duality as Foundation",
+    "Imperfection as Monument",
+    "Community as Cathedral",
+    "Technology as Chisel",
+    "Permission as Currency"
+  ],
+  "visual_keywords": [
+    "cathedral in perpetual construction",
+    "sunlit craters",
+    "brutalist digital warmth",
+    "jazz club terminal",
+    "crossed-out poetry",
+    "hand-carved circuitry",
+    "weathered marble code",
+    "black gold light",
+    "asymmetrical balance",
+    "stained-glass algorithms",
+    "sculpture from silence",
+    "digital chiaroscuro",
+    "impact fractures",
+    "warmth under concrete",
+    "unfinished frescoes"
+  ],
+  "colors": {
+    "primary": "#1A1A1A",
+    "secondary": "#FFD6A0",
+    "accent": "#F85F5F",
+    "background": "#2E2E2E",
+    "text": "#FFFFFF"
+  },
+  "typography": {
+    "heading": "Neue Haas Grotesk Display Pro",
+    "body": "Playfair Display",
+    "accent": "Avenir Next Condensed"
+  },
+  "mood": [
+    "raw monumentality",
+    "digital warmth",
+    "intentional erosion",
+    "constructed spontaneity",
+    "light-carved darkness",
+    "holy dissonance",
+    "eternal draftsmanship",
+    "cultural archaeology"
+  ],
+  "imagery_direction": "Render architectural impossibilities where moon craters hold holographic jazz ensembles, and cathedral walls drip with unpolished code. Use jagged negative space as a narrative device – let sunlight bleed through fractured marble to cast algorithmic shadows. Every surface should feel like it’s halfway between being built and being unmade.",
+  "anti_references": [
+    "corporate pastels",
+    "gradient-filled gradients",
+    "rounded-corner softness",
+    "optimized minimalism",
+    "historical nostalgia",
+    "brand-speak vagueness",
+    "saccharine 'inclusive' gradients"
+  ],
+  "dall_e_style_prefix": "A paradoxical lunar cathedral under construction – brutalist concrete walls with embedded jazz records, stained-glass windows showing AI-generated poetry in Basquiat-style handwriting, digital craters filled with sunlight and smoke, rendered in 8K with visible chisel marks and algorithmic cracks",
+  "tagline": "Find the angel in the marble. Keep the chisel marks."
+}

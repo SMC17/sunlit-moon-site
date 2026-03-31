@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <rect width="200" height="200" fill="#2C2C2C"/>
-  <circle cx="100" cy="100" r="80" fill="#FFD700"/>
-  <circle cx="140" cy="100" r="60" fill="#1A1A1A"/>
-  <polygon points="180,100 200,80 200,120" fill="#FFD700"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" background="#2C2C2C"><rect width="200" height="200" fill="#2C2C2C"/><ellipse cx="100" cy="100" rx="70" ry="60" fill="#1A1A1A"/><ellipse cx="150" cy="100" rx="40" ry="40" fill="#2C2C2C"/><polygon points="20,80 40,70 40,130 20,120" fill="#FFD700"/></svg>
